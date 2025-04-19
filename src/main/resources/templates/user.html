@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>User Page</title></head>
+<head>
+    <title>User Page</title>
+</head>
 <body>
-<h2>User Info</h2>
-<p th:text="'Email: ' + ${user.email}"></p>
-<p th:text="'First name: ' + ${user.firstName}"></p>
-<p th:text="'Last name: ' + ${user.lastName}"></p>
+<h1>Добро пожаловать, <span th:text="${user.username}">Имя</span>!</h1>
+<p>Email: <span th:text="${user.email}">email</span></p>
 
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>
 </form>
+
 </body>
 </html>
+
+

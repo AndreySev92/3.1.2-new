@@ -81,11 +81,11 @@
                 <form th:action="@{/deleteUser}" method="post" style="display:inline;">
                     <input type="hidden" name="id" th:value="${user.id}">
                     <button type="submit" class="btn btn-danger">Delete</button>
-
-                    th:action="@{/logout}" method="post">
-                    <button type="submit">Logout</button>
-
                 </form>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+
 
             </td>
 
