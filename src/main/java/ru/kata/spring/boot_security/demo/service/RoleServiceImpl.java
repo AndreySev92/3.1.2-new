@@ -18,6 +18,7 @@ public class RoleServiceImpl implements RoleService {
         this.roleRepository = roleRepository;
     }
 
+    @Transactional
     @Override
     public void save(Role role) {
         if (roleRepository.findByName(role.getName()).isEmpty()) {
