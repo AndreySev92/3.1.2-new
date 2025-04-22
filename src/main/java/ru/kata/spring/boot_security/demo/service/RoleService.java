@@ -1,12 +1,11 @@
 package ru.kata.spring.boot_security.demo.service;
 
-import ru.kata.spring.boot_security.demo.model.Role;
-
+import org.springframework.stereotype.Service;
+import ru.kata.spring.boot_security.demo.models.Role;
 import java.util.List;
-import java.util.Optional;
 
+@Service
 public interface RoleService {
-    void save(Role role);
-    Optional<Role> findByName(String name);
+
     List<Role> findAll();
 }
